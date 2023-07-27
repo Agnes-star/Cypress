@@ -37,16 +37,11 @@ describe(" Verify Login functionality", () => {
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
     );
     cy.get("input[placeholder='Username']").click();
-    cy.get("input[placeholder='Username']").type("Admin");
+    cy.get("input[placeholder='Username']").type("Adminn");
 
     cy.get("input[placeholder='Password']").click();
-    cy.get("input[placeholder='Password']").type("admin1233");
+    cy.get("input[placeholder='Password']").type(" ");
 
-    cy.get("button[type='submit']").click();
-
-    cy.get(".oxd-alert-content > .oxd-text").should(
-      "have.text",
-      "Invalid credentials"
-    );
+    cy.get(".oxd-input-group > .oxd-text").should("have.text", "Required");
   });
 });
