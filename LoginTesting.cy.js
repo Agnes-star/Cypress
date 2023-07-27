@@ -1,4 +1,4 @@
-describe(" Navigate to OrangeHRM website", () => {
+describe(" Testing OrangeHRM website", () => {
   it("verify website title - positive", () => {
     cy.visit(
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
