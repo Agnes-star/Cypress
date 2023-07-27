@@ -31,4 +31,22 @@ describe(" Verify Login functionality", () => {
 
     cy.get(":nth-child(1) > .oxd-main-menu-item > .oxd-text");
   });
+
+  it("negative login scenario", () => {
+    cy.visit(
+      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    );
+    cy.get("input[placeholder='Username']").click();
+    cy.get("input[placeholder='Username']").type("Admin");
+
+    cy.get("input[placeholder='Password']").click();
+    cy.get("input[placeholder='Password']").type("admin1233");
+
+    cy.get("button[type='submit']").click();
+
+    cy.get(".oxd-alert-content > .oxd-text").should(
+      "have.text",
+      "Invalid credentials"
+    );
+  });
 });
