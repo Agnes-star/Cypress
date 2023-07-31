@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Para Bank", () => {
-  it("Login - positive scenario", () => {
+  it("Registration - positive scenario", () => {
     cy.visit("https://parabank.parasoft.com/parabank/register.htm");
     cy.get(
       "body > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > form:nth-child(3) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)"
